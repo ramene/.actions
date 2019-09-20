@@ -1,4 +1,4 @@
-![](https://github.com/ramene/actions/workflows/build_and_publish/badge.svg)
+![](https://github.com/ramene/actions/workflows/Build_and_Publish/badge.svg)
 
 ## Usage
 
