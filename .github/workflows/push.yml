@@ -1,5 +1,5 @@
 on: push
-name: build_and_publish
+name: Build and Publish
 jobs:
   test:
     name: Test
