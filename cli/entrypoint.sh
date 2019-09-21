@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -exou
 
 # Respect AWS_DEFAULT_REGION if specified
 [ -n "$AWS_DEFAULT_REGION" ] || export AWS_DEFAULT_REGION=us-east-1
