@@ -7,6 +7,7 @@ function setup() {
   # Ensure GITHUB_WORKSPACE is set
   export GITHUB_WORKSPACE="."
   export HOME="."
+  ls -alF
 }
 
 @test "entrypoint runs successfully" {

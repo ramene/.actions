@@ -5,6 +5,9 @@ function setup() {
   export PATH="$BATS_TEST_DIRNAME/bin:$PATH"
   # Ensure GITHUB_WORKSPACE is set
   export GITHUB_WORKSPACE='.'
+  echo $PWD
+  echo $GITHUB_WORKSPACE
+  ls -alF
 }
 
 @test "entrypoint runs successfully" {
