@@ -6,7 +6,7 @@ function setup() {
   # Ensure GITHUB_WORKSPACE is set
   export GITHUB_WORKSPACE='.'
   echo $PWD
-  echo $GITHUB_WORKSPACE
+  echo $GITHUB_WORKSPACE)
   ls -alF
 }
 
@@ -45,7 +45,7 @@ function setup() {
   export HOME="$BATS_TMPDIR"
   export GITHUB_ACTION="github_action"
   run $GITHUB_WORKSPACE/entrypoint.sh help
-  actual=$( cat "${HOME}/${GITHUB_ACTION}.json" )
-  [ -f "${HOME}/${GITHUB_ACTION}.json" ]
+  actual=$( cat "${GITHUB_WORKSPACE}/${GITHUB_ACTION}.json" )
+  [ -f "${GITHUB_WORKSPACE}/${GITHUB_ACTION}.json" ]
   [ "$output" = "$actual" ]
 }
