@@ -5,23 +5,18 @@ FROM woahbase/alpine-python3
 # ARG BUILD_DATE
 LABEL name="kubectl"
 LABEL version="1.15.3"
-LABEL maintainer="Ramene Anthony <ramene.anthony@gmail.com>"
+LABEL maintainer="Ramene Anthony <keybase.io/ramene>"
 
 LABEL org.label-schema.vcs-ref=$GITHUB_SHA \ 
-      org.label-schema.vcs-url="http://github.com/ramene/aws/kubectl" \
+      org.label-schema.vcs-url="https://github.com/ramene/actions/kubectl" \
       # org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.dockerfile="/Dockerfile"
-
-# LABEL com.github.actions.name="GitHub Actions for kubectl" \
-#       com.github.actions.description="Stores a kubectl config" \
-#       com.github.actions.icon="box" \
-#       com.github.actions.color="black"
 # TODO: Find out why this isn't show up under GitHub Actions itself, is it by design or not yet released?
-LABEL "com.github.actions.name"="GitHub Actions for kubectl"
+LABEL "com.github.actions.name"="Pulumi GitHub Action for Kubernetes"
 LABEL "com.github.actions.description"="Deploy Kubeflow ML to Kubernetes on your favorite cloud using Pulumi"
 LABEL "com.github.actions.icon"="unlock"
-LABEL "com.github.actions.color"="red"
-LABEL "repository"="https://github.com/ramene/aws"
+LABEL "com.github.actions.color"="black"
+LABEL "repository"="https://github.com/ramene/actions/kubectl"
 LABEL "homepage"="https://hackmd.io/@ramene/SyZeCixLr"
 LABEL "maintainer"="Ramene Anthony <keybase.io/ramene>"
 

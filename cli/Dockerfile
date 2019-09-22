@@ -2,14 +2,14 @@ FROM python:3-stretch
 
 LABEL name="aws"
 LABEL version="1.0.0"
-LABEL repository="http://github.com/actions/aws"
-LABEL homepage="http://github.com/actions/aws"
+LABEL repository="http://github.com/ramene/actions/aws"
+LABEL homepage="http://github.com/ramene/actions/aws"
 
-LABEL maintainer="GitHub Actions <support+actions@github.com>"
-LABEL com.github.actions.name="GitHub Action for AWS"
+LABEL maintainer="Ramene Anthony <keybase.io/ramene>"
+LABEL com.github.actions.name="Pulumi GitHub Action for AWS"
 LABEL com.github.actions.description="Wraps the aws CLI to enable common AWS commands."
 LABEL com.github.actions.icon="box"
-LABEL com.github.actions.color="yellow"
+LABEL com.github.actions.color="purple"
 COPY LICENSE README.md THIRD_PARTY_NOTICE.md /
 
 ENV DOCKERVERSION=18.06.1-ce
