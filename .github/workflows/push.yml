@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Test
-      uses: actions/action-builder/shell@master
-      with:
-        entrypoint: make
-        args: test
+    # - name: Test
+    #   uses: actions/action-builder/shell@master
+    #   with:
+    #     entrypoint: make
+    #     args: test
     - name: Lint
       uses: actions/action-builder/shell@master
       with:
