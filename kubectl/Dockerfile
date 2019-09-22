@@ -3,6 +3,8 @@ FROM woahbase/alpine-python3
 # NOTE: Adapted for GitHub Actions, inspired by and derived from https://github.com/lachie83/k8s-kubectl 
 # ARG VCS_REF
 # ARG BUILD_DATE
+LABEL name="kubectl"
+LABEL version="1.15.3"
 LABEL maintainer="Ramene Anthony <ramene.anthony@gmail.com>"
 
 LABEL org.label-schema.vcs-ref=$GITHUB_SHA \ 
@@ -42,3 +44,4 @@ RUN set -xe \
 COPY entrypoint.sh /usr/local/bin/join-cluster
 
 ENTRYPOINT ["/usr/local/bin/join-cluster"]
+CMD ["help"]
