@@ -18,7 +18,7 @@ if [ ! -z "${GITHUB_WORKFLOW}" ]; then
             wget -qO- -O aws-auth.yml \
                 https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/aws-auth-cm.yaml
 
-            KUBECONFIG=kubeconfig
+            export KUBECONFIG=kubeconfig
             EKS_WORKER_ROLE=$(cat output)
 
             sed -i -e "s#<ARN of instance role (not instance profile)>#${EKS_WORKER_ROLE}#g" aws-auth.yml
