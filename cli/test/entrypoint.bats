@@ -10,7 +10,7 @@ function setup() {
   cd $GITHUB_WORKSPACE
   echo $PWD
   echo $GITHUB_WORKSPACE
-  ls -alF test/
+  ls -alFR
 }
 
 @test "entrypoint runs successfully" {
@@ -46,9 +46,9 @@ function setup() {
 
 @test "output is preserved" {
   export HOME="$BATS_TMPDIR"
-  export GITHUB_ACTION="github_action"
+  # export GITHUB_ACTION="github_action"
   run $GITHUB_WORKSPACE/entrypoint.sh help
-  actual=$( cat "${HOME}/${GITHUB_ACTION}.json" )
-  [ -f "${HOME}/${GITHUB_ACTION}.json" ]
+  actual=$( cat "${GITHUB_WORKSPACE}/${GITHUB_EVENT_NAME}.json" )
+  [ -f "${GITHUB_WORKSPACE}/${GITHUB_EVENT_NAME}.json" ]
   [ "$output" = "$actual" ]
 }

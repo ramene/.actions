@@ -12,7 +12,7 @@ set -exou
 output=$( sh -c "aws $*" )
 
 # Preserve output for consumption by downstream actions
-echo "$output" > "${GITHUB_WORKSPACE}/${GITHUB_ACTION}.${AWS_DEFAULT_OUTPUT}"
+echo "$output" > "${GITHUB_WORKSPACE}/${GITHUB_EVENT_NAME}.${AWS_DEFAULT_OUTPUT}"
 
 # Write output to STDOUT
 echo "$output"

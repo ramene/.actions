@@ -3,10 +3,11 @@
 function setup() {
   export KUBE_CONFIG_DATA=aGVsbG8gd29ybGQK
   # Override PATH to mock out the aws cli
-  export PATH="$BATS_TEST_DIRNAME/bin:$PATH"
+  # export PATH="$BATS_TEST_DIRNAME/bin:$PATH"
   # Ensure GITHUB_WORKSPACE is set
-  export GITHUB_WORKSPACE="."
-  export HOME="."
+  # export GITHUB_WORKSPACE="."
+  # export HOME="."
+  echo $PATH
 }
 
 @test "entrypoint runs successfully" {
