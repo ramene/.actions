@@ -1,5 +1,5 @@
 export ROOT_DIR=$(CURDIR)
-export DOCKER_REPO=github
+export DOCKER_REPO=ramene
 
 MODULES=$(dir $(wildcard */Makefile))
 
@@ -24,6 +24,6 @@ publish: ## Call the 'publish' target on all sub-modules
 	$(foreach mod,$(MODULES),($(MAKE) -C $(mod) $@) || exit $$?;)
 
 .PHONY: dev-all
-dev-all: lint build test
+dev-all: lint build ## test
 
 include help.mk
