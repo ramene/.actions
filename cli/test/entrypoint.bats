@@ -8,7 +8,7 @@ function setup() {
   cd $GITHUB_WORKSPACE
   echo $PWD
   echo $GITHUB_WORKSPACE
-  ls -alF
+  ls -alF test/
 }
 
 @test "entrypoint runs successfully" {
