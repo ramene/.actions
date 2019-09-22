@@ -1,5 +1,7 @@
 #!/usr/bin/env bats
 
+env
+
 function setup() {
   # Override PATH to mock out the aws cli
   export PATH="$BATS_TEST_DIRNAME/bin:$PATH"
@@ -46,7 +48,7 @@ function setup() {
   export HOME="$BATS_TMPDIR"
   export GITHUB_ACTION="github_action"
   run $GITHUB_WORKSPACE/entrypoint.sh help
-  actual=$( cat "${GITHUB_WORKSPACE}/${GITHUB_ACTION}.json" )
-  [ -f "${GITHUB_WORKSPACE}/${GITHUB_ACTION}.json" ]
+  actual=$( cat "${HOME}/${GITHUB_ACTION}.json" )
+  [ -f "${HOME}/${GITHUB_ACTION}.json" ]
   [ "$output" = "$actual" ]
 }
